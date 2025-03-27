@@ -14,13 +14,13 @@ const NavigationBar = (props) => {
                     </Link>
                 </div>
                 <div className="flex space-x-6">
-                    <Link href="/chat" className="font-[family-name:var(--font-poppins)] text-[#030303] text-base font-sans leading-6">
+                    <Link href="/chat" className="font-[family-name:var(--font-poppins)] text-[#030303] leading-6">
                         AI-Chat
                     </Link>
-                    <Link href="/copywriter-generator" className="font-[family-name:var(--font-poppins)] text-[#030303] text-base font-sans leading-6">
+                    <Link href="/copywriter-generator" className="font-[family-name:var(--font-poppins)] text-[#030303] leading-6">
                         Copywriter Generator
                     </Link>
-                    <Link href="/image-generator" className="font-[family-name:var(--font-poppins)] text-[#030303] text-base font-sans leading-6">
+                    <Link href="/image-generator" className="font-[family-name:var(--font-poppins)] text-[#030303] leading-6">
                         Image Generator
                     </Link>
                 </div>
