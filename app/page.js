@@ -1,31 +1,14 @@
-'use client';
-
-import { useChat } from '@ai-sdk/react';
-
-export default function Chat() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
-  return (
-    <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
-      {messages.map(message => (
-        <div key={message.id} className="whitespace-pre-wrap">
-          {message.role === 'user' ? 'User: ' : 'AI: '}
-          {message.parts.map((part, i) => {
-            switch (part.type) {
-              case 'text':
-                return <div key={`${message.id}-${i}`}>{part.text}</div>;
-            }
-          })}
+  export default function Home() {
+   return (
+    <div className="container mx-auto px-4 py-8 flex flex-col justify-center items-center bg-white">
+      <div className="space-y-3">
+        <div className="font-[family-name:var(--font-poppins)] text-[#030303] text-3xl font-semibold leading-9 text-center">
+          Welcome to CopyGenius
         </div>
-      ))}
-
-      <form onSubmit={handleSubmit}>
-        <input
-          className="fixed dark:bg-zinc-900 bottom-0 w-full max-w-md p-2 mb-8 border border-zinc-300 dark:border-zinc-800 rounded shadow-xl"
-          value={input}
-          placeholder="Say something..."
-          onChange={handleInputChange}
-        />
-      </form>
+        <div className="font-[family-name:var(--font-poppins)] text-[#030303] text-xl leading-7 text-center">
+          Your AI-powered solution for generating creative copywriting and stunning images effortlessly.
+        </div>
+      </div>
     </div>
-  );
-}
+   );
+ }
