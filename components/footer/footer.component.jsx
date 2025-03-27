@@ -4,13 +4,13 @@ const Footer = (props) => {
             <div className="container mx-auto px4">
                 <div className="flex flex-col justify-center items-center space-y-3">
                     <div className="flex space-x-6">
-                        <a href="#" className="hover:text-blue-400">
+                        <a href="#" className="font-[family-name:var(--font-poppins)] hover:text-blue-400">
                             About Us
                         </a>
-                        <a href="#" className="hover:text-blue-400">
+                        <a href="#" className="font-[family-name:var(--font-poppins)] hover:text-blue-400">
                             Contact
                         </a>
-                        <a href="#" className="hover:text-blue-400">
+                        <a href="#" className="font-[family-name:var(--font-poppins)] hover:text-blue-400">
                             Privacy Policy
                         </a>
                     </div>
