@@ -17,8 +17,8 @@ const NavigationBar = (props) => {
                     <Link href="/chat" className="font-[family-name:var(--font-poppins)] text-[#030303] leading-6">
                         AI-Chat
                     </Link>
-                    <Link href="/copywriter-generator-page" className="font-[family-name:var(--font-poppins)] text-[#030303] leading-6">
-                        Copywriter Generator
+                    <Link href="/copy-generator-page" className="font-[family-name:var(--font-poppins)] text-[#030303] leading-6">
+                        Copy Generator
                     </Link>
                     <Link href="/image-generator-page" className="font-[family-name:var(--font-poppins)] text-[#030303] leading-6">
                         Image Generator
