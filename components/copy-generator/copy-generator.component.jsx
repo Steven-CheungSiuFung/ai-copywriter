@@ -3,7 +3,10 @@ import { useChat } from 'ai/react';
 
 export default function CopyGenerator() {
     const { messages, input, handleInputChange, handleSubmit } = useChat({
-        api: '/api/copy-generate'
+        api: '/api/copy-generate',
+        onFinish() {
+            setIsLoading(false);
+        },
     });
 
     const [isLoading, setIsLoading] = useState(false);
@@ -24,7 +27,7 @@ export default function CopyGenerator() {
         } catch (err) {
             setError(err.message);
         } finally {
-            setIsLoading(false);
+
         }
     };
 
@@ -38,7 +41,7 @@ export default function CopyGenerator() {
                     <input
                         className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-[family-name:var(--font-poppins)]"
                         value={input}
-                        placeholder="Enter copywriting requirements..."
+                        placeholder="For example: 'Summer ice cream chocolate flavor'"
                         onChange={handleInputChange}
                         disabled={isLoading}
                     />
