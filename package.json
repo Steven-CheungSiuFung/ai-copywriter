@@ -11,10 +11,14 @@
   "dependencies": {
     "@ai-sdk/deepseek": "^0.2.1",
     "@ai-sdk/react": "^1.2.2",
+    "@tailwindcss/typography": "^0.5.16",
     "ai": "^4.2.5",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "remark-gfm": "^4.0.1",
     "replicate": "^1.0.1"
   },
   "devDependencies": {

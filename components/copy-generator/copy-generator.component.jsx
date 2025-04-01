@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useChat } from 'ai/react';
 
+import { MarkdownRenderer } from '../markdown-renderer/markdown-renderer.component';
+
 export default function CopyGenerator() {
     const { messages, input, handleInputChange, handleSubmit } = useChat({
         api: '/api/copy-generate',
@@ -74,7 +76,7 @@ export default function CopyGenerator() {
             </form>
 
             {messages.map(m => (
-                <div key={m.id}>{m.content}</div>
+                <div key={m.id}><MarkdownRenderer content={m.content} /></div>
             ))}
 
         </div>

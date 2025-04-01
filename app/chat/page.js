@@ -1,6 +1,7 @@
 'use client';
 
 import { useChat } from '@ai-sdk/react';
+import { MarkdownRenderer } from '@/components/markdown-renderer/markdown-renderer.component';
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
@@ -12,7 +13,7 @@ export default function Chat() {
           {message.parts.map((part, i) => {
             switch (part.type) {
               case 'text':
-                return <div key={`${message.id}-${i}`}>{part.text}</div>;
+                return <div key={`${message.id}-${i}`}><MarkdownRenderer content={part.text} /></div>;
             }
           })}
         </div>
